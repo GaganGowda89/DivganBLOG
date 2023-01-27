@@ -26,6 +26,7 @@ export default function Home({ posts }) {
 // Fetch data at build time
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
+  console.log('Start1 ===', posts);
   return {
     props: { posts },
   };

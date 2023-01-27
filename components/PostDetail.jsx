@@ -3,6 +3,7 @@ import React from 'react';
 import moment from 'moment';
 
 const PostDetail = ({ post }) => {
+  console.log('PostDetails retrieved', post);
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 

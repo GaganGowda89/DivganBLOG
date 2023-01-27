@@ -6,6 +6,7 @@ import { getPosts, getPostDetails } from '../../services';
 import { AdjacentPosts } from '../../sections';
 
 const PostDetails = ({ post }) => {
+  console.log('Start3...', post);
   const router = useRouter();
 
   if (router.isFallback) {
