@@ -9,15 +9,15 @@ const Author = ({ author }) => (
       <Image
         unoptimized
         loader={grpahCMSImageLoader}
-        alt={author.name}
+        alt={author[0].name}
         height="100px"
         width="100px"
         className="align-middle rounded-full"
-        src={author.photo.url}
+        src={author[0].photo.url}
       />
     </div>
-    <h3 className="text-white mt-4 mb-4 text-xl font-bold">{author.name}</h3>
-    <p className="text-white text-ls">{author.bio}</p>
+    <h3 className="text-white mt-4 mb-4 text-xl font-bold">{author[0].name}</h3>
+    <p className="text-white text-ls">{author[0].bio}</p>
   </div>
 );
 

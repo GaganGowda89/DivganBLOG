@@ -11,11 +11,14 @@ const PostWidget = ({ categories, slug }) => {
 
   useEffect(() => {
     if (slug) {
+      console.log('Slug is already', slug);
       getSimilarPosts(categories, slug).then((result) => {
+        console.log('Result:', result);
         setRelatedPosts(result);
       });
     } else {
       getRecentPosts().then((result) => {
+        console.log('Else Result:', result);
         setRelatedPosts(result);
       });
     }

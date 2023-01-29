@@ -2,6 +2,11 @@ import { FeaturedPosts } from '../sections/index';
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from '../services';
 
+// const posts = [
+//   { title: '3 day Tour', excerpt: 'Capadocia 3 day tour' },
+//   { title: 'Web Development', excerpt: 'Web Development' },
+// ];
+
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -14,6 +19,7 @@ export default function Home({ posts }) {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
+            <img src="https://i.ibb.co/zRPLVgB/About-us.jpg" />
             <PostWidget />
             <Categories />
           </div>

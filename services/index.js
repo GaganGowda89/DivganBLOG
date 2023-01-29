@@ -56,32 +56,32 @@ export const getCategories = async () => {
 
 export const getPostDetails = async (slug) => {
   const query = gql`
-    query GetPostDetails{
-      post(where: {slug: "3daytrip"}) {
-        title
-        excerpt
-        featuredImage {
+  query GetPostDetails($slug : String!) {
+    post(where: {slug: $slug}) {
+      title
+      excerpt
+      featuredImage {
+        url
+      }
+      author{
+        name
+        bio
+        photo {
           url
         }
-        author{
-          name
-          bio
-          photo {
-            url
-          }
-        }
-        createdAt
+      }
+      createdAt
+      slug
+      content {
+        raw
+      }
+      categories {
+        name
         slug
-        content {
-          json
-        }
-        categories {
-          name
-          slug
-        }
       }
     }
-  `;
+  }
+`;
 
   const result = await request(graphqlAPI, query, { slug });
 
