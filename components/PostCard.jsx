@@ -6,15 +6,15 @@ import Link from 'next/link';
 import { grpahCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => {
-  console.log('Post details', post);
-  console.log('Post Image', post.featuredImage.url);
-  console.log('Post Author Name', post.author[0].name);
-  console.log('Post Photo URL', post.author[0].photo.url);
+  console.log('Post details');
+  console.log('Post Image');
+  console.log('Post Author Name');
+  console.log('Post Photo URL');
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-        <img src={post.featuredImage.url} alt="" className="object-top absolute h-110 w-90 object-fill shadow-lg rounded-t-lg lg:rounded-lg" />
+        <img src={post.featuredImage.url} alt="" className="object-top absolute h-150 w-90 object-fill shadow-lg rounded-t-lg lg:rounded-lg" />
       </div>
 
       <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
