@@ -9,7 +9,7 @@ const PostCard = ({ post }) => {
   console.log('Post details');
   console.log('Post Image');
   console.log('Post Author Name');
-  console.log('Post Photo URL');
+  console.log('Post Photo URL ');
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
