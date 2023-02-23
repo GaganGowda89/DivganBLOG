@@ -19,7 +19,7 @@ const PostDetail = ({ post }) => {
       }
 
       if (obj.type === 'link') {
-        modifiedText = (<a className="text-blue-500 underline mb-8" href={obj.href} key={index}>{obj.href}</a>);
+        modifiedText = (<a className="text-blue-500 underline mb-8 truncate" href={obj.href} key={index}>{obj.href}</a>);
       }
     }
     switch (type) {
