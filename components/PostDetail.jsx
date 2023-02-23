@@ -5,7 +5,6 @@ import moment from 'moment';
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
-
     if (obj) {
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
@@ -18,8 +17,11 @@ const PostDetail = ({ post }) => {
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
       }
-    }
 
+      if (obj.type === 'link') {
+        modifiedText = (<a className="text-blue-500 underline" href={obj.href} key={index}>{obj.href}</a>);
+      }
+    }
     switch (type) {
       case 'heading-one':
         return <h1 key={index} className="text-4xl font-black mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
@@ -74,7 +76,6 @@ const PostDetail = ({ post }) => {
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
-
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>

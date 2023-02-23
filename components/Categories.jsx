@@ -5,7 +5,7 @@ import { getCategories } from '../services';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
-  const text = 'We, Divya and Gagan, are a happy couple living in Germany.👫🇩🇪 We love to travel 🌍 and capture our experiences through photography 📷 and blogging. On our blog, you will find a lots of tips to plan your next holiday❤️💕🌟, as well as some itineraries that we have personally taken. Our mission is to inspire others to live a healthy life 🌸and travel to the fullest, and also share some technological insights.';
+  const text = 'We, Divya & Gagan, currently located in Germany👫🇩🇪 are zealous with a zest for travel 🌍 and capture our experiences through photography 📷 and blogging. On our blog, you will find a lots of tips to plan your next holiday❤️💕🌟, as well as some itineraries that we have personally taken. Our mission is to inspire others to live a healthy life 🌸and travel to the fullest, and also share some technological insights.';
 
   useEffect(() => {
     getCategories().then((newCategories) => {
