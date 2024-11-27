@@ -33,6 +33,14 @@ const PostDetail = ({ post }) => {
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+      case 'ordered-list':
+        return (
+          <ol key={index} className="list-decimal list-inside mb-8">{modifiedText.map((item, i) => <li key={i}>{item}</li>)}</ol>
+        );
+      case 'unordered-list':
+        return (
+          <ul key={index} className="list-disc list-inside mb-8">{modifiedText.map((item, i) => <li key={i}>{item}</li>)}</ul>
+        );
       case 'image':
         return (
           <img
